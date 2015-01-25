@@ -1,0 +1,38 @@
+{
+  "headers": {
+    "Received": [
+      "by mail-ig0.google.com with SMTP id l13so5.5 for <youraddress@cloudmailin.net>; Sun, 25 Jan 2015 13:48:22 -0800",
+      "by 127.0.0.1 with HTTP; Sun, 25 Jan 2015 13:48:21 -0800"
+    ],
+    "Date": "Sun, 25 Jan 2015 22:48:21 +0100",
+    "From": "Peter Hellberg <peter@example.com>",
+    "To": "to@example.com",
+    "Bcc": "youraddress@cloudmailin.net",
+    "Message-ID": "<CAN5bZjVp+up8g@mail.gmail.com>",
+    "Subject": "Bcc test",
+    "Mime-Version": "1.0",
+    "Content-Type": "multipart/alternative; boundary=20cf303636fb05f9",
+    "X-Google-DKIM-Signature": "v=1; a=rsa-sha256; … ",
+    "X-Gm-Message-State": "ALoCoQmbZjkgle8IQUNl3lRyf4q4Cng…",
+    "X-Received": "by 127.0.0.1 with SMTP id g16mr1834; Sun, 25 Jan 2015 13:48:21 -0800 (PST)"
+  },
+  "envelope": {
+    "to": "youraddress@cloudmailin.net",
+    "recipients": [
+      "youraddress@cloudmailin.net"
+    ],
+    "from": "peter@example.com",
+    "helo_domain": "mail-ig0.google.com",
+    "remote_ip": "127.85.213.172",
+    "spf": {
+      "result": "none",
+      "domain": "example.com"
+    }
+  },
+  "plain": "Another test body\n\n--\nPeter Hellberg\nRuby Developer, Code7 Interactive\n",
+  "html": "<div dir=\"ltr\">Another test body<br clear=\"all\"><div><div><div class=\"gmail_signature\"><br>--<br>Peter Hellberg<br>Ruby Developer, Code7 Interactive</div></div>\n</div></div>\n",
+  "reply_plain": null,
+  "attachments": [
+
+  ]
+}
