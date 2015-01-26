@@ -60,7 +60,7 @@ type Data struct {
 }
 
 // Decode a message into a Data struct
-func Decode(r io.ReadCloser) (Data, error) {
+func Decode(r io.Reader) (Data, error) {
 	var ret Data
 
 	err := json.NewDecoder(r).Decode(&ret)
