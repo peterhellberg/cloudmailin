@@ -36,6 +36,8 @@ func handler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	defer r.Body.Close()
+
 	if msg, err := cloudmailin.Decode(r.Body); err == nil {
 		w.Header().Set("Content-Type", "application/json; charset=utf-8")
 
