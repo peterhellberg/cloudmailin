@@ -12,6 +12,56 @@ Go package used to handle the CloudMailin [JSON Hash Email Message Format](http:
 go get -u github.com/peterhellberg/cloudmailin
 ```
 
+## Example
+
+```go
+package main
+
+import (
+	"encoding/json"
+	"fmt"
+	"net/http"
+	"os"
+
+	"github.com/peterhellberg/cloudmailin"
+)
+
+var port = getenv("PORT", "5454")
+
+func handler(w http.ResponseWriter, r *http.Request) {
+	if r.Method != "POST" {
+		w.Write([]byte("POST a message here.\n\n" +
+			"curl -X POST -d @example.json http://0.0.0.0:" + port))
+
+		return
+	}
+
+	if msg, err := cloudmailin.Decode(r.Body); err == nil {
+		w.Header().Set("Content-Type", "application/json; charset=utf-8")
+
+		json.NewEncoder(w).Encode(&map[string]string{
+			"to":      msg.Headers.To,
+			"subject": msg.Headers.Subject,
+		})
+	}
+}
+
+func main() {
+	http.HandleFunc("/", handler)
+
+	fmt.Printf("Listening on http://0.0.0.0:%s\n", port)
+	http.ListenAndServe(":"+port, nil)
+}
+
+func getenv(key, fallback string) string {
+	if v := os.Getenv(key); v != "" {
+		return v
+	}
+
+	return fallback
+}
+```
+
 ## License (MIT)
 
 Copyright (c) 2015 [Peter Hellberg](http://c7.se/)
