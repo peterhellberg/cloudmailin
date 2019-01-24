@@ -1,5 +1,7 @@
 language: go
 
+dist: xenial
+
 sudo: false
 
-go: 1.4.2
+go: "go1.11.5"
