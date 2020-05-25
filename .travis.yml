@@ -1,7 +1,7 @@
 language: go
 
-dist: xenial
+dist: bionic
 
-sudo: false
-
-go: "go1.11.5"
+go:
+ - "1.14.3"
+ - "1.13.11"
