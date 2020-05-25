@@ -15,47 +15,46 @@ type SPF struct {
 type Envelope struct {
 	To         string   `json:"to"`
 	Recipients []string `json:"recipients"`
-	From       string   `json:"From"`
+	From       string   `json:"from"`
 	HeloDomain string   `json:"helo_domain"`
 	RemoteIP   string   `json:"remote_ip"`
+	TLS        bool     `json:"tls"`
 	SPF        SPF      `json:"spf"`
 }
 
 // Headers contains all of the message headers extracted from the email.
 type Headers struct {
-	ReturnPath            string   `json:"Return-Path"`
-	Received              []string `json:"Received"`
-	Date                  string   `json:"Date"`
-	From                  string   `json:"From"`
-	To                    string   `json:"To"`
-	Bcc                   string   `json:"Bcc"`
-	MessageID             string   `json:"Message-ID"`
-	Subject               string   `json:"Subject"`
-	MimeVersion           string   `json:"Mime-Version"`
-	ContentType           string   `json:"Content-Type"`
-	DeliveredTo           string   `json:"Delivered-To"`
-	ReceivedSPF           string   `json:"Received-SPF"`
-	AuthenticationResults string   `json:"Authentication-Results"`
-	UserAgent             string   `json:"User-Agent"`
+	Received                string `json:"received"`
+	Date                    string `json:"date"`
+	From                    string `json:"from"`
+	To                      string `json:"to"`
+	MessageID               string `json:"message_id"`
+	Subject                 string `json:"subject"`
+	MimeVersion             string `json:"mime_version"`
+	ContentType             string `json:"content_type"`
+	ContentTransferEncoding string `json:"content_transfer_encoding"`
+	XOriginatingIP          string `json:"x_originating_ip"`
+	XDomainSigner           string `json:"x_domain_signer"`
+	DkimSignature           string `json:"dkim_signature"`
 }
 
 // Attachments to the message
 type Attachments struct {
-	Content     string `json:"content"`
-	URL         string `json:"url"`
-	FileName    string `json:"file_name"`
-	ContentType string `json:"content-type"`
-	Size        int    `json:"size"`
-	Disposition string `json:"disposition"`
+	Content     string      `json:"content"`
+	FileName    string      `json:"file_name"`
+	ContentType string      `json:"content_type"`
+	Size        string      `json:"size"`
+	Disposition string      `json:"disposition"`
+	ContentID   interface{} `json:"content_id"`
 }
 
 // A Data struct contains all the fields of a decoded message
 type Data struct {
 	Headers     Headers       `json:"headers"`
 	Envelope    Envelope      `json:"envelope"`
-	Plain       string        `json:"plain"`
-	HTML        string        `json:"html"`
-	ReplyPlain  string        `json:"reply_plain"`
+	Plain       *string       `json:"plain"`
+	HTML        *string       `json:"html"`
+	ReplyPlain  *string       `json:"reply_plain"`
 	Attachments []Attachments `json:"attachments"`
 }
 

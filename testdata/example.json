@@ -1,54 +1,45 @@
 {
   "headers": {
-    "Return-Path": "from@example.com",
-    "Received": [
-      "by 10.52.90.229 with SMTP id bz5cs75582vdb; Mon, 16 Jan 2012 09:00:07 -0800",
-      "by 10.216.131.153 with SMTP id m25mr5479776wei.9.1326733205283; Mon, 16 Jan 2012 09:00:05 -0800",
-      "from mail-wi0-f170.google.com (mail-wi0-f170.google.com [209.85.212.170]) by mx.google.com with ESMTPS id u74si9614172weq.62.2012.01.16.09.00.04 (version=TLSv1/SSLv3 cipher=OTHER); Mon, 16 Jan 2012 09:00:04 -0800"
-    ],
-    "Date": "Mon, 16 Jan 2012 17:00:01 +0000",
-    "From": "Message Sender <sender@example.com>",
-    "To": "Message Recipient<to@example.co.uk>",
-    "Message-ID": "<4F145791.8040802@example.com>",
-    "Subject": "Test Subject",
-    "Mime-Version": "1.0",
-    "Content-Type": "multipart/alternative; boundary=------------090409040602000601080801",
-    "Delivered-To": "to@example.com",
-    "Received-SPF": "neutral (google.com: 10.0.10.1 is neither permitted nor denied by best guess record for domain of from@example.com) client-ip=10.0.10.1;",
-    "Authentication-Results": "mx.google.com; spf=neutral (google.com: 10.0.10.1 is neither permitted nor denied by best guess record for domain of from@example.com) smtp.mail=from@example.com",
-    "User-Agent": "Postbox 3.0.2 (Macintosh/20111203)"
+    "received": "by mail-lj1-f172.google.com with SMTP id m12so17318352ljc.6        for <demo+demo_891377794372725@cloudmailin.net>; Mon, 25 May 2020 00:53:08 -0700",
+    "date": "Mon, 25 May 2020 09:52:14 +0200",
+    "from": "Message Sender <sender@example.com>",
+    "to": "to@example.co.uk",
+    "message_id": "<CAN5bZjV2Wjbm7Upm0c4P5WDOy+OY14CV-gDNcAyb-Vs-RD6ZHw@mail.gmail.com>",
+    "subject": "Test Subject",
+    "mime_version": "1.0",
+    "content_type": "multipart/mixed; boundary=0000000000000345ec05a67445f7",
+    "dkim_signature": "v=1; a=rsa-sha256; c=relaxed/relaxed;        d=example.com; s=google;        h=mime-version:from:date:message-id:subject:to;        bh=dhtqNQpeG9v7+62f6QNO9A78f40p1HrJbL1DcjzKsqs=;        b=a2191nE6eP9QwTDVkx4wAyFTDMwBXXXhbpX8mzzsp6bHsvlS7lmLlRMD8flL1IMm1c         u8edB4PFaIYaf1ez9iivCSAgjjnS541jUyS5lT/t6mrhi+Q8/uysySYQMnu3hveUKMLc         M+5WFo+pqcrLHiQs2woZlAxaBLmfhNwDazYdzggBfgjPs3M5Nd/sXxBV2t9kPBCStUog         gtjwQmp23WWnZpz/jKgC/OdsLNTuPnQ7ptBHFquBUoZ1Z1OgDmR22fZHYCW8m/Squeij         nw3hflckhrtkzbT8AnU/7lUwfZxsfPTz7iZrvCBfocYJxaVQuW1QQAb/4cjOQ6InqqKJ         u4Lw==",
+    "x_google_dkim_signature": "v=1; a=rsa-sha256; c=relaxed/relaxed;        d=1e100.net; s=20161025;        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;        bh=dhtqNQpeG9v7+62f6QNO9A78f40p1HrJbL1DcjzKsqs=;        b=CU4GA9cBVo6WYZ7rCU/jcFqpC7wYbCqpfdXYCK8hytfOUvPlZCJPQBcnAjzuauTv8T         Kmgd7wtBvPanpwcXwfULgVb3S+P2pWoWorSpEZchFMN+julpkEuRlFxClFh6HXHi/EkZ         ihKtNev+Ebe4XfBziRTLE6JslzYOWaAmUYLFNrDwLw/R+c/ZPo3XzdtKKAkINgVSnWoG         2hm3+w3qJcOqolsQGn6otmcL57Nap1veBG/UOH5KOq48RycxJ/72o0fg5oc1E4ypov8/         anHVQOBgL75RTN88w9+6jI6Oz3UIUgnZy00SWULdFHQgdC4xeLJ8NEDRKpqoulumi1nS         zFrQ==",
+    "x_gm_message_state": "AOAM531WcDOYk+4gcX/EycTBUa4ALqgxYMp0qJNyydeAPF5VpouFfa0z\tf2sOOgvOEoudMXxIRrnvlk9Dw+FwVJLZ8bYuGDazOVv+yUle2Q==",
+    "x_google_smtp_source": "ABdhPJwrMsyKfwBbxemDbhxBsNBiF+AoRHpS43hUVqyXnZcr90F18qdOSfDgJk9mywkl7NuEiZPAh9uX0foN1oYoFnc=",
+    "x_received": "by 2002:a2e:a58f:: with SMTP id m15mr13123094ljp.146.1590393187798; Mon, 25 May 2020 00:53:07 -0700 (PDT)"
   },
   "envelope": {
-    "to": "to@example.com",
-    "from": "from@example.com",
-    "helo_domain": "localhost",
-    "remote_ip": "127.0.0.1",
+    "to": "demo+demo_891377794372725@cloudmailin.net",
     "recipients": [
-      "to@example.com",
-      "another@example.com"
+      "demo+demo_891377794372725@cloudmailin.net"
     ],
+    "from": "sender@example.com",
+    "helo_domain": "mail-lj1-f172.google.com",
+    "remote_ip": "127.0.0.1",
+    "tls": true,
     "spf": {
       "result": "pass",
       "domain": "example.com"
     }
   },
-  "plain": "Test with HTML.",
-  "html": "<html><head>\n<meta http-equiv=\"content-type\" content=\"text/html; charset=ISO-8859-1\"></head><body\n bgcolor=\"#FFFFFF\" text=\"#000000\">\nTest with <span style=\"font-weight: bold;\">HTML</span>.<br>\n</body>\n</html>",
-  "reply_plain": "Message reply if found.",
+  "plain": "*Test body*\n\n\n*https://example.com <https://example.com>*\n\n--Sender\n",
+  "html": "<div dir=\"ltr\"><div><b>Test body</b></div><div><b><br></b></div><div><b><a href=\"https://example.com\">https://example.com</a><br></b></div><div><div><div dir=\"ltr\" class=\"gmail_signature\" data-smartmail=\"gmail_signature\"><div dir=\"ltr\"><div><div dir=\"ltr\"><div><br>--<br>Sender</div></div></div></div></div></div></div></div>\r\n",
+  "reply_plain": null,
   "attachments": [
     {
-      "content": "dGVzdGZpbGU=",
-      "file_name": "file.txt",
-      "content_type": "text/plain",
-      "size": 8,
-      "disposition": "attachment"
-    },
-    {
-      "content": "dGVzdGZpbGU=",
-      "file_name": "file.txt",
-      "content_type": "text/plain",
-      "size": 8,
-      "disposition": "attachment"
+      "content": "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",
+      "file_name": "astronaut.png",
+      "content_type": "image/png",
+      "size": "3414",
+      "disposition": "attachment",
+      "content_id": "<f_kam7000k0>"
     }
   ]
 }
+
