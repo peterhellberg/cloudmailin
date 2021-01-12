@@ -24,18 +24,18 @@ type Envelope struct {
 
 // Headers contains all of the message headers extracted from the email.
 type Headers struct {
-	Received                string `json:"received"`
-	Date                    string `json:"date"`
-	From                    string `json:"from"`
-	To                      string `json:"to"`
-	MessageID               string `json:"message_id"`
-	Subject                 string `json:"subject"`
-	MimeVersion             string `json:"mime_version"`
-	ContentType             string `json:"content_type"`
-	ContentTransferEncoding string `json:"content_transfer_encoding"`
-	XOriginatingIP          string `json:"x_originating_ip"`
-	XDomainSigner           string `json:"x_domain_signer"`
-	DkimSignature           string `json:"dkim_signature"`
+	Received                []string `json:"received"`
+	Date                    string   `json:"date"`
+	From                    string   `json:"from"`
+	To                      string   `json:"to"`
+	MessageID               string   `json:"message_id"`
+	Subject                 string   `json:"subject"`
+	MimeVersion             string   `json:"mime_version"`
+	ContentType             string   `json:"content_type"`
+	ContentTransferEncoding string   `json:"content_transfer_encoding"`
+	XOriginatingIP          string   `json:"x_originating_ip"`
+	XDomainSigner           string   `json:"x_domain_signer"`
+	DkimSignature           string   `json:"dkim_signature"`
 }
 
 // Attachments to the message

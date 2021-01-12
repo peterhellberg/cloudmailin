@@ -1,0 +1,39 @@
+{
+  "headers": {
+    "received": [
+      "by filterdrecv-p3mdw1-7474cd8bfd-lzn2n with SMTP id filterdrecv-p3mdw1-7474cd8bfd-lzn2n-17-5FFC8C3F-5C\r\n        2021-01-11 17:34:55.803383359 +0000 UTC m=+2745169.445070490",
+      "from MTk1MjcyMDY (unknown)\r\n\tby ismtpd0005p1lon1.sendgrid.net (SG)\r\n\twith HTTP\r\n\tid z-x4bnvFTOqXNwAu9DGHYA\r\n\tMon, 11 Jan 2021 17:34:55.665 +0000 (UTC)"
+    ],
+    "date": "Mon, 11 Jan 2021 17:34:55 +0000",
+    "from": "example The Prelude <noreply@example.dev>",
+    "reply_to": "noreply@example.dev",
+    "to": "asdf9390933023+32222222-2222-2222-2222-222222222222@cloudmailin.net",
+    "message_id": "<z-x4bnvFTOqXNwAu9DGHYA@ismtpd0005p1lon1.sendgrid.net>",
+    "subject": "example account confirmation",
+    "mime_version": "1.0",
+    "content_type": "multipart/alternative; boundary=c508fb3130f8e4c3b514e852319959816ab276d34813d846c598fda6fd53",
+    "dkim_signature": "v=1; a=rsa-sha256; c=relaxed/relaxed; d=example.dev;\th=content-type:from:mime-version:subject:reply-to:to;\ts=s1; bh=dAgjLn/YaPkWMUQ0cbEUzIjX6DH3rPc2a/Zi+taCnz0=;\tb=m0NmKYj3p2asRgcQcDwXzfJIqpaMGexgyRwZ2oXsICw8c/gZ2MeeA7fWbMmcUceJxsql\tnOsfHTQZ4kTtpZpdKPSQA1GcUUmIQ8TH8h/XTwn16cM2VgQsHCtYGWZpeLh6pMfunV90wj\tLIXvZeSWlaIuc8taIxBb4ODY4PCtsqaOc=",
+    "x_sg_eid": "AQZtKwqPAkDrcFoQgRGJ8Y2ACh0y6NEm6VbxjT9W0jd9qT30ZdH/C/I0gtEYwpHeTfcx0DBbCNyb7nR7EfE/9T3Vn/L2U+Va2KHjDcTz7KSllcblxv7L+8as0xkPxTGMfgZU67A2AropauKyS2HuVSIJ8K7ill4BaLQCtEzixslEsRF93PFxQ4oCUTO19AEgBZSvCxKELZifBNwS1DKcwBLB6F6PjLuXDT+IpwCPi6IPziZ5zF7A/+8cuOLBzlwvRnCXO0CrwaTh7qnvE9LOdzaHkNYu8EuoI1pFMi/HA2H5Ibl2v9WfbBdLqQofMrUJwN2nsOPlZIm0Agye/1vch7VWuWBZVK5gEgsDu6wIp1E=",
+    "x_entity_id": "DJKlF212tB51glF0OOQcYw=="
+  },
+  "envelope": {
+    "to": "asdf9390933023+32222222-2222-2222-2222-222222222222@cloudmailin.net",
+    "recipients": [
+      "asdf9390933023+32222222-2222-2222-2222-222222222222@cloudmailin.net"
+    ],
+    "from": "bounces+19527206-5e75-asdf9390933023+32222222-2222-2222-2222-222222222222=cloudmailin.net@em6463.example.dev",
+    "helo_domain": "asdfsdafsdaf.outbound-mail.sendgrid.net",
+    "remote_ip": "129.72.161.13",
+    "tls": true,
+    "tls_cipher": "TLSv1.3",
+    "md5": "27f29e85c8fa61f513a9309c2e4e1ed8",
+    "spf": {
+      "result": "pass",
+      "domain": "em6463.example.dev"
+    }
+  },
+  "plain": "<p>You're almost done! Click on the link below to activate your example experience:</p>\r\n<p>https://asdfsadfa.ct.sendgrid.net/ls/click?upn=ou0xTyTbd-2FJwU4pJwYh3DR3GWUInche4nZ6slldRHtk6CQIdxp9Mh9-2FCxoYV4B6iyMW97K8bgIc8Tw6n6lytM1bfszxCcfX7KNjpcmASs3890TAft018PRrBftiXCARn-2BbCpcttk98Lj4cO-2B1mCd-2Fx7gS-2FpmAIyZbOaPeyYT-2BIdQM-2Bd6nQvlzIjMkJ3VfnqawDZ63kM8CthBcOzvHQHLuCxTduwegtaHOVsF-2Bq8RHg7CmafeuGFy4WOcYjNmbOMVcZwEdL3y-2BEDCAvMCSA0X-2Fg-3D-3DpZke_nHlereRm8oFOVYW-2BRmvre9Nx6K6Mjsw7CPZsqJ-2FuTXMhN5NNqtll0I2uNYN3YzQ2ecIo5NGNNUQmQbXAGRTTok4Z1-2FSjgAjUzcGoX3Mwcq-2FzM3-2B44fBEXr5145ETE9Z14ML-2B3-2FivWx84DCkqHbWFPXRwggrflv2Uxo0-2FO0myyi9E0Zxtx6gbzGRf94XZxjKKpt6eo3H3T2fM4lzhsAoOxMGS1bOKHyJpl2MqA6uaDdsaOYmeygIP-2B2xIf3gD-2FcKXUD7KNj6ZLDrqVJaCdS3nL-2BSm1l9SlYyJThTXbstsA-2BE-3D</p>\r\n<p>If you did not register for example, please ignore this email.</p>",
+  "html": "<p>You're almost done! Click on the link below to activate your example experience:</p>\r\n<p>https://asodfksaof.cloudfront.net/account/confirm/asdfasdfsadasdfdsfdsfa.asdfasdfsadfa.ZAYx9F0hY2XtCcQ8W2quFqgd4sxRVpOfvJ3d-4HG2Dc</p>\r\n<p>If you did not register for example, please ignore this email.</p><img src=\"https://asdfsadfa.ct.sendgrid.net/wf/open?upn=7txgSfAPnI8wiudz-2BxtJRHi4qwAzSm6iZ5J4TOa7rM6tX3fGsNbhNJgr-asdfsadfsadfsad-2B2CTAZFw10qyg8aJMjYfusH1ghHt8wgig2b28AfA-2BLx6PBf56gegbiLSwDe8xQ6Lk104OS3RtJOvr32vN2tj7P0jPpSF5FmBUGnk22f-2BFptVhg44myYkGv-2BV4W8lxRPXlTslqidl3rxsbj6Kv0j-2BbcWqNN4q5rXX6L-2Bosfjlyf5soYtivVAp-2Fd3B5\" alt=\"\" width=\"1\" height=\"1\" border=\"0\" style=\"height:1px !important;width:1px !important;border-width:0 !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !important;\"/>",
+  "reply_plain": null,
+  "attachments": []
+}
