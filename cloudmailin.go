@@ -1,8 +1,10 @@
 package cloudmailin
 
 import (
+	"bytes"
 	"encoding/json"
 	"io"
+	"io/ioutil"
 )
 
 // A SPF (Sender Policy Framework) result for the given IP address and Domain.
@@ -38,6 +40,12 @@ type Headers struct {
 	DkimSignature           string   `json:"dkim_signature"`
 }
 
+// Headers contains all of the message headers extracted from the email.
+type HeadersStringReceived struct {
+	Received string `json:"received"`
+	Headers
+}
+
 // Attachments to the message
 type Attachments struct {
 	Content     string      `json:"content"`
@@ -58,11 +66,43 @@ type Data struct {
 	Attachments []Attachments `json:"attachments"`
 }
 
+type DataHeadersStringReceived struct {
+	Headers HeadersStringReceived `json:"headers"`
+	Data
+}
+
 // Decode a message into a Data struct
 func Decode(r io.Reader) (Data, error) {
 	var ret Data
+	var tmp DataHeadersStringReceived
 
-	err := json.NewDecoder(r).Decode(&ret)
+	body, _ := ioutil.ReadAll(r)
+
+	reader1 := bytes.NewReader(body)
+	reader2 := bytes.NewReader(body)
+
+	err := json.NewDecoder(reader1).Decode(&ret)
+	if err != nil {
+		tmpErr := json.NewDecoder(reader2).Decode(&tmp)
+		if tmpErr != nil {
+			return ret, tmpErr
+		}
+
+		ret.Headers.Received = []string{tmp.Headers.Received}
+		ret.Headers.Date = tmp.Headers.Date
+		ret.Headers.From = tmp.Headers.From
+		ret.Headers.To = tmp.Headers.To
+		ret.Headers.MessageID = tmp.Headers.MessageID
+		ret.Headers.Subject = tmp.Headers.Subject
+		ret.Headers.MimeVersion = tmp.Headers.MimeVersion
+		ret.Headers.ContentType = tmp.Headers.ContentType
+		ret.Headers.ContentTransferEncoding = tmp.Headers.ContentTransferEncoding
+		ret.Headers.XOriginatingIP = tmp.Headers.XOriginatingIP
+		ret.Headers.XDomainSigner = tmp.Headers.XDomainSigner
+		ret.Headers.DkimSignature = tmp.Headers.DkimSignature
+
+		return ret, nil
+	}
 
 	return ret, err
 }
