@@ -1,0 +1,36 @@
+{
+  "headers": {
+    "received": "by mail-pj1-f48.google.com with SMTP id gq23-20020a17090b1057b0290151869af68bso4809999pjb.4        for <12345678+makkara2@cloudmailin.net>; Mon, 26 Apr 2021 02:24:52 -0700",
+    "date": "Mon, 26 Apr 2021 12:17:53 +0300",
+    "from": "Hermanni Hiiri <Hermanni.Hiiri@iki.fi>",
+    "to": "12345678+makkara2@cloudmailin.net",
+    "message_id": "<CABE=HBn=ua1jSYBv+2wmjCwE8UWmY1HSretQ3bK+7EPuBbnLwQ@mail.gmail.com>",
+    "subject": "asdfsdf",
+    "mime_version": "1.0",
+    "content_type": "multipart/alternative; boundary=0000000000005fe81e05c0dca0c1",
+    "x_google_dkim_signature": "v=1; a=rsa-sha256; c=relaxed/relaxed;        d=1e100.net; s=20161025;        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;        bh=BFVkIm9mAAzeg7P9BWXWH8cktg8aDX7gUsSgOU9fggE=;        b=SPUWCuuHapOUogawA8uxchlaKcr9PXvFzl7SQNegIaZbm/wiPsnNIPWOCniV1f3GVb         X7lM0Z/CsgRrapsoNlJSfSK7azLJWeghyy8PDYSdJzI5snCf66m1KiX31lmAe+Sf48Fh         MjcQx6Bpu59AH6k6M5GvrNSwrbb3ZkrXtABGGWP00yqGWIS3w74uDDdGaSU3GNL0p3q7         KEgut3iEiOyzjiq1SG6tmqLlKk+pnLeY9A0kOXbxcHmhaWFDeqTlQYCI0JBpMuuHBPbE         iXA5UztYq7d1ag2AyB6KlScIMfLwSowS3qo3VfdcPw6+dwxMLfBui+aDrCRTUaQ/d9vF         7c8A==",
+    "x_gm_message_state": "AOAM533VZvxGFE+II85oPnUiwjS5bqqrTYmGFwTOTzlcAgcIVaXEooZD\tUhQR5kxOGWA71shcOtpCqMLabaaRd1hGMHl7Yi3M1QCc+tU=",
+    "x_google_smtp_source": "ABdhPJwmC8PQ+6nLjPtUWElq6JP5uuyLhvcW3wAgw63p132R6EMg77/swr5OwPyokGKkgS4vTprkDRscVQ+XOiomjf4=",
+    "x_received": "by 2002:aa7:9f8f:0:b029:274:21e:fe0c with SMTP id z15-20020aa79f8f0000b0290274021efe0cmr8112859pfr.8.1619428699530; Mon, 26 Apr 2021 02:18:19 -0700 (PDT)"
+  },
+  "envelope": {
+    "to": "12345678+makkara2@cloudmailin.net",
+    "recipients": [
+      "12345678+makkara2@cloudmailin.net"
+    ],
+    "from": "Hermanni.Hiiri@gmail.com",
+    "helo_domain": "mail-pj1-f48.google.com",
+    "remote_ip": "209.85.216.48",
+    "tls": true,
+    "tls_cipher": "TLSv1.3",
+    "md5": "80ad58184cad900aeff52a92dc8203f1",
+    "spf": {
+      "result": "neutral",
+      "domain": "gmail.com"
+    }
+  },
+  "plain": "12345678+makkara2@cloudmailin.net\n",
+  "html": "<div dir=\"ltr\"><div dir=\"ltr\"><a href=\"mailto:12345678%2Bmakkara2@cloudmailin.net\">12345678+makkara2@cloudmailin.net</a><br></div></div>\n",
+  "reply_plain": null,
+  "attachments": []
+}
